@@ -1,18 +1,11 @@
 import streamlit as st
 import pandas as pd
-
-
-
+import sklearn
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report, confusion_matrix
-from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
-#import seaborn as sns
-from sklearn import metrics
+#import seaborn as sns=
 import category_encoders as ce
 import matplotlib.pyplot as plt
-from sklearn.naive_bayes import GaussianNB
 
 header = st.container()
 dataset = st.container()
@@ -37,10 +30,10 @@ def get_data(filename):
 
 with header:
     st.title('Welcome to my awesome Data Science project')
-    st.text('In this project, I look into the transactions of NYC...')
+    st.text('In this project, I look into the income of a fraction of the inhabitants of NYC...')
 
 with dataset:
-    st.header('NYC taxi dataset')
+    st.header('Income dataset')
     st.text('I found this dataset on blablabla.com..')
 
     income_data = get_data('data\\adult_income_data.csv')
