@@ -36,7 +36,7 @@ with dataset:
     st.header('Income dataset')
     st.text('I found this dataset on blablabla.com..')
 
-    income_data = get_data('data\\adult_income_data.csv')
+    income_data = get_data('data/dult_income_data.csv')
     #st.write(income_data.head())
 
     st.subheader('Education level distribution on the Income dataset')
