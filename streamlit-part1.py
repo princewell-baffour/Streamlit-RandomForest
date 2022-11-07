@@ -43,7 +43,7 @@ with dataset:
     st.header('NYC taxi dataset')
     st.text('I found this dataset on blablabla.com..')
 
-    income_data = get_data('D:\TM\Semester 1\AI\Lessons\Project\data\\adult_income_data.csv')
+    income_data = get_data('data\\adult_income_data.csv')
     #st.write(income_data.head())
 
     st.subheader('Education level distribution on the Income dataset')
@@ -66,8 +66,8 @@ with model_training:
 
     n_estimators = sel_col.selectbox('How many trees should there be?', options=[100,200,300,'No limit'], index = 0)
 
-    sel_col.text('Here is a list of features in my data:')
-    sel_col.write(income_data.columns)
+    disp_col.text('Here is a list of features in my data:')
+    disp_col.write(income_data.columns)
 
     input_feature = sel_col._text_input('Which feature should be used as the input feature?','Sex')
 
@@ -90,6 +90,6 @@ with model_training:
     random_forest.fit(X_train, y_train.values.flatten())
     prediction = random_forest.predict(X_test)
     #RF_Score = 
-    disp_col.subheader('The accuracy of the model was calculated with the **score** metric:')
-    disp_col.write(random_forest.score(X_test, y_test))
+    sel_col.subheader('The accuracy of the model was calculated with the **score** metric:')
+    sel_col.write(random_forest.score(X_test, y_test))
 
