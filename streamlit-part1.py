@@ -5,7 +5,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 #import seaborn as sns=
 import category_encoders as ce
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 header = st.container()
 dataset = st.container()
